@@ -8,7 +8,7 @@ and incorporates different payment methods with varying processing times.
 The application has the following:
 - Unit testing using rspec
 - Validations
-- I used Strategy Pattern to implement the payment calculation
+- Strategy Pattern for the implementation of payment calculation
 - Response is in Array of Objects format
 
 ## Instruction
