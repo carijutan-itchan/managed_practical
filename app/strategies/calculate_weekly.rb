@@ -13,9 +13,9 @@ class CalculateWeekly < FrequencyStrategy
       if rent_changes.present?
         effective_date = Date.parse(rent_changes[:effective_date])
         amount = (current_date <= effective_date ? rent.rent_amount : rent_changes[:rent_amount])
-        payment_dates << { date: payment_date.strftime("%Y-%m-%d"), amount:, payment_method: (rent.payment_method || 'instant')}
+        payment_dates << { date: payment_date.strftime("%Y-%m-%d"), amount:, payment_method: rent.payment_method}
       else
-        payment_dates << { date: payment_date.strftime("%Y-%m-%d"), amount: rent.rent_amount, payment_method: (rent.payment_method || 'instant') }
+        payment_dates << { date: payment_date.strftime("%Y-%m-%d"), amount: rent.rent_amount, payment_method: rent.payment_method }
       end
 
       break if (current_date + 6.days) >= end_date

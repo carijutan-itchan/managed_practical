@@ -23,15 +23,15 @@ describe RentPaymentService do
       context 'when the rent frequency is WEEKLY' do
         it 'returns 9 dates of payments' do
           expected_payment_dates = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-03-08", payment_method: "instant"},
-            {amount: 900, date: "2024-03-15", payment_method: "instant"},
-            {amount: 900, date: "2024-03-22", payment_method: "instant"},
-            {amount: 900, date: "2024-03-29", payment_method: "instant"},
-            {amount: 900, date: "2024-04-05", payment_method: "instant"},
-            {amount: 900, date: "2024-04-12", payment_method: "instant"},
-            {amount: 900, date: "2024-04-19", payment_method: "instant"},
-            {amount: 900, date: "2024-04-26", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-03-08", payment_method: nil},
+            {amount: 900, date: "2024-03-15", payment_method: nil},
+            {amount: 900, date: "2024-03-22", payment_method: nil},
+            {amount: 900, date: "2024-03-29", payment_method: nil},
+            {amount: 900, date: "2024-04-05", payment_method: nil},
+            {amount: 900, date: "2024-04-12", payment_method: nil},
+            {amount: 900, date: "2024-04-19", payment_method: nil},
+            {amount: 900, date: "2024-04-26", payment_method: nil}
           ]
           expect(rent_payment_service).to eq expected_payment_dates
         end
@@ -42,11 +42,11 @@ describe RentPaymentService do
 
         it 'returns 5 dates of payments' do
           expected_payment_dates = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-03-15", payment_method: "instant"},
-            {amount: 900, date: "2024-03-29", payment_method: "instant"},
-            {amount: 900, date: "2024-04-12", payment_method: "instant"},
-            {amount: 900, date: "2024-04-26", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-03-15", payment_method: nil},
+            {amount: 900, date: "2024-03-29", payment_method: nil},
+            {amount: 900, date: "2024-04-12", payment_method: nil},
+            {amount: 900, date: "2024-04-26", payment_method: nil}
           ]
           expect(rent_payment_service).to eq expected_payment_dates
         end
@@ -57,8 +57,8 @@ describe RentPaymentService do
 
         it 'returns 3 dates of payments' do
           expected_payment_dates = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-04-01", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-04-01", payment_method: nil}
           ]
           expect(rent_payment_service).to eq expected_payment_dates
         end
@@ -77,15 +77,15 @@ describe RentPaymentService do
         it 'returns 9 dates of payments with the relevant rent amount ' do
 
           expected_payment_dates_with_amount = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-03-08", payment_method: "instant"},
-            {amount: 900, date: "2024-03-15", payment_method: "instant"},
-            {amount: 900, date: "2024-03-22", payment_method: "instant"},
-            {amount: 900, date: "2024-03-29", payment_method: "instant"},
-            {amount: 900, date: "2024-04-05", payment_method: "instant"},
-            {amount: 7000, date: "2024-04-12", payment_method: "instant"},
-            {amount: 7000, date: "2024-04-19", payment_method: "instant"},
-            {amount: 7000, date: "2024-04-26", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-03-08", payment_method: nil},
+            {amount: 900, date: "2024-03-15", payment_method: nil},
+            {amount: 900, date: "2024-03-22", payment_method: nil},
+            {amount: 900, date: "2024-03-29", payment_method: nil},
+            {amount: 900, date: "2024-04-05", payment_method: nil},
+            {amount: 7000, date: "2024-04-12", payment_method: nil},
+            {amount: 7000, date: "2024-04-19", payment_method: nil},
+            {amount: 7000, date: "2024-04-26", payment_method: nil}
           ]
 
           expect(rent_payment_service).to eq expected_payment_dates_with_amount
@@ -97,11 +97,11 @@ describe RentPaymentService do
 
         it 'returns 5 dates of payments with the relevant rent amount ' do
           expected_payment_dates_with_amount = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-03-15", payment_method: "instant"},
-            {amount: 900, date: "2024-03-29", payment_method: "instant"},
-            {amount: 7000, date: "2024-04-12", payment_method: "instant"},
-            {amount: 7000, date: "2024-04-26", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-03-15", payment_method: nil},
+            {amount: 900, date: "2024-03-29", payment_method: nil},
+            {amount: 7000, date: "2024-04-12", payment_method: nil},
+            {amount: 7000, date: "2024-04-26", payment_method: nil}
           ]
 
           expect(rent_payment_service).to eq expected_payment_dates_with_amount
@@ -114,8 +114,8 @@ describe RentPaymentService do
         it 'returns 3 dates of payments with the relevant rent amount ' do
 
           expected_payment_dates_with_amount = [
-            {amount: 900, date: "2024-03-01", payment_method: "instant"},
-            {amount: 900, date: "2024-04-01", payment_method: "instant"}
+            {amount: 900, date: "2024-03-01", payment_method: nil},
+            {amount: 900, date: "2024-04-01", payment_method: nil}
           ]
 
           expect(rent_payment_service).to eq expected_payment_dates_with_amount
@@ -139,7 +139,7 @@ describe RentPaymentService do
         end
       end
 
-      context 'when payment method is credit card' do
+      context 'when payment method is bank transfer' do
         let(:payment_method) { 'bank_transfer' }
         let(:rent_frequency) { 'monthly' }
 
@@ -148,6 +148,21 @@ describe RentPaymentService do
           expected_payment_dates_with_amount= [
             {amount: 900, date: "2024-03-04", payment_method: "bank_transfer"},
             {amount: 900, date: "2024-04-04", payment_method: "bank_transfer"}
+          ]
+
+          expect(rent_payment_service).to eq expected_payment_dates_with_amount
+        end
+      end
+
+      context 'when payment method is instant' do
+        let(:payment_method) { 'instant' }
+        let(:rent_frequency) { 'monthly' }
+
+        it 'returns 3 dates of payments with 3 days of process at the end of payment date' do
+
+          expected_payment_dates_with_amount= [
+            {amount: 900, date: "2024-03-01", payment_method: "instant"},
+            {amount: 900, date: "2024-04-01", payment_method: "instant"}
           ]
 
           expect(rent_payment_service).to eq expected_payment_dates_with_amount
